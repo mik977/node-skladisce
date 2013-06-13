@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+</head>
+<body>
+  
+<h1>{{ pagename|title }}</h1>
+<table border="1">
+{% for item in data %}
+  {% if loop.first %}
+  <tr><th>Del</th><th>Opis</th><th>Znamka</th><th>Model</th><th>Datum vnosa</th><th>Datum iznosa</th></tr>
+  {% endif %}
+  <tr><td>{{ item.del }}</td><td>{{ item.opis }}</td><td>{{ item.znamka }}</td><td>{{ item.model }}</td><td>{{ item.vnos|date('j.n.Y H:i:s') }}</td><td>{% if item.iznos %}{{ item.iznos|date('j.n.Y H:i:s') }}{% else %}-{% endif %}</td></tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
