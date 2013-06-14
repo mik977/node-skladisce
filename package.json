@@ -30,15 +30,6 @@
   "bugs": {
     "url": "https://github.com/mik977/node-skladisce/issues"
   },
-  "bundleDependencies": [
-    "optimist",
-    "node-firebird",
-    "extend",
-    "pass",
-    "journey",
-    "swig",
-    "winser"
-  ],
   "dependencies": {
     "extend": "~1.1.3",
     "journey": "~0.4.0-pre-3",
