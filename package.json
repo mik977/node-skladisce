@@ -12,8 +12,8 @@
   },
   "scripts": {
     "start": "node ./bin/node-skladisce",
-    "postinstall": "node_modules/.bin/winser -i -s -c",
-    "preuninstall": "node_modules/.bin/winser -r -x -s"
+    "postinstall": "./node_modules/.bin/winser -i -s -c",
+    "preuninstall": "./node_modules/.bin/winser -r -x -s"
   },
   "main": "./lib/node-skladisce",
   "repository": {
