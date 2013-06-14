@@ -8,10 +8,10 @@
   ],
   "homepage": "http://github.com/mik977/node-skladisce",
   "bin": {
-    "node-skladisce": "./node-skladisce"
+    "node-skladisce": "./bin/node-skladisce"
   },
   "scripts": {
-    "start": "node ./node-skladisce",
+    "start": "node ./bin/node-skladisce",
     "postinstall": "winser -i -s -c",
     "preuninstall": "winser -r -x -s"
   },
