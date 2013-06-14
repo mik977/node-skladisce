@@ -21,9 +21,7 @@ Object.defineProperty(global, '__line', {
 var util = require('util'),
     url = require('url'),
     fs = require('fs'),
-    argv = require('optimist').argv,
-    db = require('./lib/db'),
-    service = require('./lib/service');
+    argv = require('optimist').argv;
 
 var help = [
     "usage: server [options]",
