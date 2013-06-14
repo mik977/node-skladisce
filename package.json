@@ -1,7 +1,7 @@
 {
   "name": "node-skladisce",
   "version": "0.1.1",
-  "description": "Skladi��e za JUNG d.o.o. - REST API",
+  "description": "Skladisce za JUNG d.o.o. - REST API",
   "keywords": [
     "avtojung",
     "rest"
@@ -23,7 +23,7 @@
   "author": "Miha Kralj <miha@link-go.si>",
   "license": "BSD",
   "engines": {
-    "node": ">=0.6"
+    "node": "*"
   },
   "gitHead": "b7f9b4535564c692157d02e220bb4c8057d538e6",
   "readmeFilename": "README.md",
