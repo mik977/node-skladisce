@@ -16,6 +16,9 @@
     "install-windows-service": "winser -i",
     "ininstall-windows-service": "winser -r"
   },
+  "directories" : {
+    "lib" : "./lib"
+  },
   "main": "./lib/node-skladisce",
   "repository": {
     "type": "git",
