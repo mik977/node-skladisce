@@ -33,8 +33,6 @@ var help = [
     " -p Port that you want the home server to run on [8000]",
     " -a, --auth password_file to use for HTTP Basic Auth [none]",
     " -g, --genpasswd username:password generate password and append to password_file [none]",
-    " -f, --fbconn firebird://username:password@host:port/database use this connection string for firebird [firebird://SYSDBA:masterkey@127.0.0.1:3050/avtojung]",
-    " -x, --api API key to use for API key Auth [none]",
     " -h, --help You're staring at it",
 ].join('\n');
 
@@ -55,18 +53,10 @@ if (argv.g || argv.genpasswd) {
     });
   }
 } else {
-  var fbconn = url.parse(argv.f || argv.fbconn || 'firebird://SYSDBA:masterkey@127.0.0.1:3050/avtojung');
   var options = {
     host: argv.n || '0.0.0.0',
     port: argv.p || 8000,
-    firebird: {
-      host: fbconn.hostname || '127.0.0.1',
-      port: fbconn.port || 3050,
-      auth: fbconn.auth || 'SYSDBA:masterkey',
-      database: fbconn.pathname ? fbconn.pathname.substr(1) : 'avtojung'
-    },
-    basicAuth: argv.a || argv.auth || null,
-    apiKey: argv.x || argv.api || 'e7d778c5-a349-4c60-a573-4b9955bebd93'
+    basicAuth: argv.a || argv.auth || null
   };
 
   if (options.basicAuth) {
